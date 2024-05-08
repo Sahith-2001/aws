@@ -1,0 +1,5 @@
+com\task06\AuditProducer.class
+com\task06\util\AuditUpdate.class
+com\task06\util\AuditInsert.class
+com\task06\util\ConfigurationItem.class
+com\task06\UuidTrigger.class
