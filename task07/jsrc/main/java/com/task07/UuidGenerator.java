@@ -28,7 +28,7 @@ import com.syndicate.deployment.model.RetentionSetting;
 public class UuidGenerator implements RequestHandler<Object, String> {
     private AmazonS3 s3 = AmazonS3ClientBuilder.standard().build();
     public String handleRequest(Object request, Context context) {
-        String bucket = "cmtr-ecf0d511-uuid-storage"; // replace with your bucket name
+        String bucket = "cmtr-ecf0d511-uuid-storage-test"; // replace with your bucket name
         String key = Instant.now().toString();
         // Generate 10 UUIDs
         Map<String, Object> data = new HashMap<>();
