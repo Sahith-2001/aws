@@ -31,7 +31,7 @@ public class Processor implements RequestHandler<Object, Map<String, Object>> {
 public Processor() {
 	AmazonDynamoDB client = AmazonDynamoDBClientBuilder.defaultClient();
 	DynamoDB dynamoDB = new DynamoDB(client);
-	eventsTable = dynamoDB.getTable("cmtr-ecf0d511-Weather");
+	eventsTable = dynamoDB.getTable("cmtr-ecf0d511-Weather-test");
 }
 
 	public Map<String, Object> handleRequest(Object request, Context context) {
