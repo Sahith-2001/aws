@@ -21,7 +21,8 @@ import java.util.UUID;
 @LambdaHandler(lambdaName = "processor",
 	roleName = "processor-role",
 	isPublishVersion = true,
-	logsExpiration = RetentionSetting.SYNDICATE_ALIASES_SPECIFIED
+	logsExpiration = RetentionSetting.SYNDICATE_ALIASES_SPECIFIED,
+	        tracingMode = TracingMode.Active
 )
 @LambdaUrlConfig(authType = AuthType.NONE, invokeMode = InvokeMode.BUFFERED)
 @DynamoDbTriggerEventSource(batchSize = 10, targetTable = "Weather")
