@@ -13,6 +13,8 @@ import com.syndicate.deployment.annotations.lambda.LambdaUrlConfig;
 import com.syndicate.deployment.model.RetentionSetting;
 import com.syndicate.deployment.model.lambda.url.AuthType;
 import com.syndicate.deployment.model.lambda.url.InvokeMode;
+import com.syndicate.deployment.model.TracingMode;
+
 
 import java.util.HashMap;
 import java.util.Map;
