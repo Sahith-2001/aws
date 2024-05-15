@@ -30,11 +30,15 @@ import java.util.UUID;
 @DynamoDbTriggerEventSource(batchSize = 10, targetTable = "Weather")
 public class Processor implements RequestHandler<Object, Map<String, Object>> {
 	private final Table eventsTable;
+		private final Table eventsTable2;
+
 
 public Processor() {
 	AmazonDynamoDB client = AmazonDynamoDBClientBuilder.defaultClient();
 	DynamoDB dynamoDB = new DynamoDB(client);
-	eventsTable = dynamoDB.getTable("cmtr-ecf0d511-Weather-test");
+	eventsTable = dynamoDB.getTable("cmtr-ecf0d511-Weather");
+		eventsTable2 = dynamoDB.getTable("cmtr-ecf0d511-Weather-test");
+
 }
 
 	public Map<String, Object> handleRequest(Object request, Context context) {
@@ -47,6 +51,9 @@ public Processor() {
 
 		  Item item = new Item().withPrimaryKey("id", UUID.randomUUID().toString()).withJSON("forecast", weather);
 		  eventsTable.putItem(item);
+				  eventsTable2.putItem(item);
+
+		
 		Map<String, Object> resultMap = new HashMap<String, Object>();
 
 		resultMap.put("statusCode", 200);
