@@ -24,7 +24,7 @@ import java.util.UUID;
 	logsExpiration = RetentionSetting.SYNDICATE_ALIASES_SPECIFIED
 )
 @LambdaUrlConfig(authType = AuthType.NONE, invokeMode = InvokeMode.BUFFERED)
-@DynamoDbTriggerEventSource(batchSize = 10, targetTable = "Weather")
+@DynamoDbTriggerEventSource(batchSize = 10, targetTable = "Weather-test")
 public class Processor implements RequestHandler<Object, Map<String, Object>> {
 	private final Table eventsTable;
 
