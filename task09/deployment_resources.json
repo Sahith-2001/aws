@@ -4,7 +4,7 @@
       "Statement": [
         {
           "Action": [
-            "logs:CreateLogGroup",
+             "logs:CreateLogGroup",
             "logs:CreateLogStream",
             "logs:PutLogEvents",
             "dynamodb:GetItem",
@@ -15,10 +15,13 @@
             "ssm:PutParameter",
             "ssm:GetParameter",
             "kms:Decrypt",
-	    "dynamodb:ListStreams",
-	    "dynamodb:DescribeStream",
-	    "dynamodb:GetShardIterator",
-	    "dynamodb:GetRecords"
+            "xray:PutTraceSegments",
+            "xray:PutTelemetryRecords",
+            "dynamodb:GetRecords",
+            "dynamodb:GetShardIterator",
+            "dynamodb:DescribeStream",
+            "dynamodb:ListStreams",
+	    "lambda:*"
           ],
           "Effect": "Allow",
           "Resource": "*"
