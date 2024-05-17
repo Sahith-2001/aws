@@ -2,7 +2,7 @@ package com.task10.pojo;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 
-@DynamoDBTable(tableName = "cmtr-57544369-Reservations")
+@DynamoDBTable(tableName = "cmtr-ecf0d511-Reservations")
 public class Reservations {
     @DynamoDBHashKey
     private String reservationId;
