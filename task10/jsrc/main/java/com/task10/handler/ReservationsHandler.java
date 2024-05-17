@@ -39,7 +39,7 @@ public class ReservationsHandler {
 
     public APIGatewayProxyResponseEvent getAllReservations() {
         AmazonDynamoDB ddb = AmazonDynamoDBClientBuilder.defaultClient();
-        String tableName = "cmtr-57544369-Reservations-test";
+        String tableName = "cmtr-ecf0d511-Reservations-test";
         ScanRequest scanRequest = new ScanRequest()
                 .withTableName(tableName);
         ScanResult result = ddb.scan(scanRequest);
