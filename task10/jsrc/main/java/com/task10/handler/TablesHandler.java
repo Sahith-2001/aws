@@ -16,7 +16,7 @@ import java.util.Map;
 
 public class TablesHandler {
 
-    private final String tableName = "cmtr-57544369-Tables";
+    private final String tableName = "cmtr-ecf0d511-Tables-test";
 
     public APIGatewayProxyResponseEvent getAllTables() {
         System.out.println("Get All Tables");
