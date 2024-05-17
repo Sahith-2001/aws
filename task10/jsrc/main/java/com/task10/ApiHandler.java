@@ -42,7 +42,7 @@ public class ApiHandler implements RequestHandler<APIGatewayProxyRequestEvent, A
         String userPoolId = listUserPoolsResponse.userPools().get(0).id();
 
         for (UserPoolDescriptionType userPool : listUserPoolsResponse.userPools()) {
-            if (userPool.name().equals("cmtr-57544369-simple-booking-userpool")) {
+            if (userPool.name().equals("cmtr-ecf0d511-simple-booking-userpool")) {
                 userPoolId = userPool.id();
                 System.out.println("User Pool Id is: " + userPoolId);
                 break;
